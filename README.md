@@ -100,14 +100,14 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 - **JPA (Java Persistence API)**: Para comunicação com o banco de dados
 - **Lombok**: Para reduzir a verbosidade do código
 
-### Banco de Dados
-- **PostgreSQL**: Banco de dados relacional principal
-- **MongoDB**: Para armazenamento de logs e histórico de consultas
-
 ### Segurança
 - **OAuth2**: Autenticação e autorização
 - **HTTPS**: Comunicação segura
 - **JWT (JSON Web Tokens)**: Gerenciamento de sessões
+
+### Banco de Dados
+- **PostgreSQL**: Banco de dados relacional principal
+- **MongoDB**: Para armazenamento de logs e histórico de consultas
 
 ## 👥 Jornada do Usuário
 
