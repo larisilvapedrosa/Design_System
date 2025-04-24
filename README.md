@@ -112,4 +112,4 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 - *Lombok*: Para reduzir a verbosidade do código e agilizar o desenvolvimento
 
 ## Banco de Dados
-- **MySql**: Escolhido pois atende os requisitos do sistema, é barato, e é facil em caso de manuntenção.
+- **MySql**: Escolhido pois atende os requisitos do sistema, possui um baixo custo, e é facil em caso de manuntenção. Alem disso o sistema nao tem necessidade da complexidade de um banco não relacional
