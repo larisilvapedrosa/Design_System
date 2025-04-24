@@ -1,5 +1,7 @@
 ## 🏥 Documentação do Projeto: Clínica Médica
 
+## Desenho Arquitetural
+
 ## 🏗️ Arquitetura
 
 ### Estilo Arquitetural
