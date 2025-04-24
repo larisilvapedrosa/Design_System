@@ -94,7 +94,7 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 
 ## Frontend
 - **React**: Framework principal para desenvolvimento do frontend
-- **Tailwind CSS**: Para estilização e design responsivo
+- **MUI**: Para estilização e design responsivo
 - **Axios**: Para comunicação com a API
 
 ## BackEnd
