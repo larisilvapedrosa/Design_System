@@ -112,5 +112,4 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 - *Lombok*: Para reduzir a verbosidade do código e agilizar o desenvolvimento
 
 ## Banco de Dados
-- **PostgreSQL**: Banco de dados relacional principal
-- **MongoDB**: Para armazenamento de logs e histórico de consultas
+- **MySql**: Escolhido pois atende os requisitos do sistema, é barato, e é facil em caso de manuntenção.
