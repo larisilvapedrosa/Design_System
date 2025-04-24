@@ -1,5 +1,7 @@
 ## 🏥 Documentação do Projeto: Clínica Médica
 
+## 🎨 Design System
+
 ## Desenho Arquitetural
 
 ## 🏗️ Arquitetura
@@ -11,8 +13,6 @@ Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e imp
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
 ## Desenho Arquitetural
-
-## 🎨 Design System
 
 ### 🧩 Identidade Visual
 
@@ -112,22 +112,3 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 ### Banco de Dados
 - **PostgreSQL**: Banco de dados relacional principal
 - **MongoDB**: Para armazenamento de logs e histórico de consultas
-
-## 👥 Jornada do Usuário
-
-### Médico
-- Se cadastra
-- Visualização da agenda de consulta
-- Cancela agendamento
-
-### Paciente
-- Se cadastra
-- Agenda consulta
-- Consulta agendamento
-- Cancela agendamento
-
-### Administradir
-- Gerenciamento de agendamentos
-- Cadastro de pacientes
-- Emissão de relatórios
-- Gestão de especialidades médicas
