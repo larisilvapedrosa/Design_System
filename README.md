@@ -1,5 +1,3 @@
-## 🏥 Documentação do Projeto: Clínica Médica
-
 ## 🎨 Design System
 
 ## Desenho Arquitetural
