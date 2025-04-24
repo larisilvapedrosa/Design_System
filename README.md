@@ -92,21 +92,25 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 
 ## 🛠️ Tecnologias
 
-### Frontend
+## Frontend
 - **React**: Framework principal para desenvolvimento do frontend
 - **Tailwind CSS**: Para estilização e design responsivo
 - **Axios**: Para comunicação com a API
 
-### Backend
-- **Java com Spring Boot (versão 21)**: Framework principal para desenvolvimento do backend
-- **JPA (Java Persistence API)**: Para comunicação com o banco de dados
-- **Lombok**: Para reduzir a verbosidade do código
+## BackEnd
+### Requisitos de Segurança
+- *OAuth2*: Utilizado para autenticação e autorização segura dos usuários.
+- *HTTPS*: Protocolo de comunicação para garantir a segurança dos dados transmitidos.
+- *JWT (JSON Web Tokens)*: Para gerenciar sessões de usuários de forma segura.
 
-### Segurança
-- **OAuth2**: Autenticação e autorização
-- **HTTPS**: Comunicação segura
-- **JWT (JSON Web Tokens)**: Gerenciamento de sessões
+### Protocolo de Comunicação
+- *API REST*: Utilizaremos HTTP para comunicação entre os serviços.
 
-### Banco de Dados
+### Tecnologias Utilizadas
+- *Java com Spring Boot (versão 21)*: Framework principal para desenvolvimento do backend.
+- *JPA (Java Persistence API)*: Para comunicação com o banco de dados.
+- *Lombok*: Para reduzir a verbosidade do código e agilizar o desenvolvimento
+
+## Banco de Dados
 - **PostgreSQL**: Banco de dados relacional principal
 - **MongoDB**: Para armazenamento de logs e histórico de consultas
