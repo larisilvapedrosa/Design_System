@@ -1,4 +1,4 @@
-# 🏥 # Documentação do Projeto: Clínica Médica
+## 🏥 Documentação do Projeto: Clínica Médica
 
 ## 🏗️ Arquitetura
 
