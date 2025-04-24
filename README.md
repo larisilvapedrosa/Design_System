@@ -8,6 +8,8 @@ Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e imp
 ### Padrão Arquitetural
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
+## Desenho Arquitetural
+
 ## 🎨 Design System
 
 ### 🧩 Identidade Visual
