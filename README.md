@@ -84,6 +84,9 @@ Cada serviço possui seu próprio banco de dados, garantindo o princípio da des
 | ![Variant2-5](images/Property%201=Variant2%20(5).png) | User | Usado para navegar para a de "perfil do usario". |
 | ![Variant2-4](images/Property%201=Variant2%20(4).png) | User disable | Usado para indicar quando a tela de "perfil do usario"  nao estiver em foco |
 
+#### Figma
+https://www.figma.com/design/jx09dLrSN39Vk5C2C2gNGQ/Trabalho-Arquitetura?node-id=0-1&p=f&t=p98Jdmk2imyMfsq0-0 
+
 ### 👥 Jornada do Usuário
 
 #### Médico
