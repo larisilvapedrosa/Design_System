@@ -10,6 +10,7 @@ Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e imp
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
 ## Desenho Arquitetural
+![Close Icon](images/microservice.drawio.png)
 O diagrama representa o estilo em microsserviços, mediada por um API Gateway que centraliza o acesso aos diversos serviços da aplicação. A Interface se comunica com o API Gateway, que por sua vez distribui as requisições entre os serviços especializados:
 
 - Serviço de Agendamento: Responsável pela marcação e cancelamento de consultas.
