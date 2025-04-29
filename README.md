@@ -10,8 +10,21 @@ Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e imp
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
 ## Desenho Arquitetural
+O diagrama representa o estilo em microsserviços, mediada por um API Gateway que centraliza o acesso aos diversos serviços da aplicação. A Interface se comunica com o API Gateway, que por sua vez distribui as requisições entre os serviços especializados:
 
-### 🧩 Identidade Visual
+- Serviço de Agendamento: Responsável pela marcação e cancelamento de consultas.
+
+- Serviço de Paciente: Gerencia os dados e operações relacionados aos pacientes.
+
+- Serviço Médico: Manipula informações e funcionalidades relacionadas aos médicos.
+  
+- Centraliza funcionalidades administrativas como relatórios.
+
+- Serviço de Autenticação: Controla o login, cadastro e autenticação dos usuários.
+
+Cada serviço possui seu próprio banco de dados, garantindo o princípio da descentralização de dados típico de microsserviços.
+
+### Identidade Visual
 
 #### Paleta de Cores
 
@@ -33,7 +46,7 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 | Auxiliar | Poppins | Regular | Textos secundarios, fonte dos inputs |
 
 
-### 🧱 Componentes UI
+### Componentes UI
 
 #### Botões
 
