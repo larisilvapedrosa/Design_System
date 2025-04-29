@@ -1,7 +1,5 @@
 ## 🎨 Design System
 
-## Desenho Arquitetural
-
 ## 🏗️ Arquitetura
 
 ### Estilo Arquitetural
