@@ -10,7 +10,7 @@ Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e imp
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
 
 ## Desenho Arquitetural
-![Close Icon](images/microservice.drawio.png)
+![Close Icon](images/microservice.drawio.png) <br/>
 O diagrama representa o estilo em microsserviços, mediada por um API Gateway que centraliza o acesso aos diversos serviços da aplicação. A Interface se comunica com o API Gateway, que por sua vez distribui as requisições entre os serviços especializados:
 
 - Serviço de Agendamento: Responsável pela marcação e cancelamento de consultas.
@@ -126,3 +126,62 @@ Cada serviço possui seu próprio banco de dados, garantindo o princípio da des
 
 ## Banco de Dados
 - **MySql**: Escolhido pois atende os requisitos do sistema, possui um baixo custo, e é facil em caso de manuntenção. Alem disso o sistema nao tem necessidade da complexidade de um banco não relacional
+
+### Nomenclatura
+
+- **Tabelas**: nomes no plural, com inicial maiúscula, representando entidades do domínio (ex: `Usuarios`, `Pacientes`, `Consultas`).
+
+###  Tabela `Usuarios`
+
+| Campo       | Tipo            | Restrições | Descrição                            |
+|-------------|------------------|------------|----------------------------------------|
+| id_usuario  | INT              | PK         | Identificador único do usuário        |
+| nome        | VARCHAR(100)     | -          | Nome completo do usuário              |
+| email       | VARCHAR(100)     | UNIQUE     | E-mail do usuário (único)             |
+| senha       | VARCHAR(255)     | -          | Senha (armazenada com hash)           |
+
+---
+
+###  Tabela `Pacientes`
+
+| Campo       | Tipo  | Restrições | Descrição                          |
+|-------------|--------|------------|------------------------------------|
+| id_usuario  | INT    | FK         | Referência ao usuário              |
+
+---
+
+###  Tabela `Medicos`
+
+| Campo       | Tipo         | Restrições | Descrição                          |
+|-------------|---------------|------------|------------------------------------|
+| id_usuario  | INT           | FK         | Referência ao usuário              |
+| crm         | VARCHAR(20)   | -          | Número do CRM do médico            |
+
+---
+
+###  Tabela `Administradores`
+
+| Campo       | Tipo  | Restrições | Descrição                          |
+|-------------|--------|------------|------------------------------------|
+| id_usuario  | INT    | FK         | Referência ao usuário              |
+
+---
+
+###  Tabela `Consultas`
+
+| Campo        | Tipo                               | Restrições | Descrição                           |
+|--------------|------------------------------------|------------|-------------------------------------|
+| id_consulta  | INT                                | PK         | Identificador único da consulta     |
+| data_hora    | DATETIME                           | -          | Data e hora da consulta             |
+| status       | ENUM('Agendada','Cancelada','Realizada') | -    | Estado atual da consulta           |
+| id_paciente  | INT                                | FK         | Referência ao paciente              |
+| id_medico    | INT                                | FK         | Referência ao médico                |
+
+---
+
+###  Tabela `Especialidades`
+
+| Campo            | Tipo          | Restrições | Descrição                            |
+|------------------|---------------|------------|----------------------------------------|
+| id_especialidade | INT           | PK         | Identificador único da especialidade   |
+| nome             | VARCHAR(100)  | -          | Nome da especialidade médica           |
