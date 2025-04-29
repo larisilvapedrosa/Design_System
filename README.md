@@ -1,9 +1,10 @@
 ## 🎨 Design System
+No contexto de arquitetura de software, um Design System é um conjunto unificado de padrões, componentes, diretrizes e práticas que guiam tanto o desenvolvimento quanto o design de interfaces e funcionalidades.
 
 ## 🏗️ Arquitetura
 
 ### Estilo Arquitetural
-Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e implantação independente dos módulos do sistema.
+Adotamos o estilo Microsserviços, promovendo escalabilidade, resiliência e implantação independente dos módulos do sistema. Esse estilo se encaixa muito bem no contexto de clínicas médicas porque permite que diferentes partes do sistema funcionem de forma independente. Se uma parte precisar de manutenção, o resto continua funcionando normalmente, o que é importante em ambientes médicos, onde o sistema precisa estar disponível o tempo todo.
 
 ### Padrão Arquitetural
 O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando uma separação clara entre regras de negócio, lógica de apresentação e manipulação de dados. Isso facilita a evolução do sistema e promove um desenvolvimento mais organizado.
