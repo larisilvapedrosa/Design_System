@@ -197,3 +197,33 @@ https://www.figma.com/design/b9HuaHdyiE8sYG3BYNUW3a/Untitled?node-id=0-1&p=f&t=u
 |------------------|---------------|------------|----------------------------------------|
 | id_especialidade | INT           | PK         | Identificador único da especialidade   |
 | nome             | VARCHAR(100)  | -          | Nome da especialidade médica           |
+
+## Governança do Design System
+
+A governança do Design System é essencial para assegurar sua consistência, evolução contínua e adoção adequada pelas equipes. Para o Sistema de Gestão de Consultas Médicas, estabelecemos as seguintes diretrizes:
+
+### Responsáveis
+
+- **Squad de Design System**: formado por representantes de design, frontend e arquitetura.
+- **Designers e Desenvolvedores de cada squad**: responsáveis por propor novos componentes e colaborar com manutenções.
+
+### Processo de Atualização
+
+1. **Proposição**: novos componentes ou alterações são sugeridos via Pull Request em repositório dedicado.
+2. **Revisão**: a equipe de governança avalia a aderência às diretrizes de acessibilidade, responsividade, padronização e reuso.
+3. **Documentação**: cada alteração aceita deve ser documentada no Storybook e registrada no Notion com data e responsáveis.
+4. **Publicação**: os componentes aprovados são publicados via **npm** e disponibilizados para todos os serviços no monorepo via **Turborepo**.
+
+### Boas Práticas
+
+- Nomeação clara e consistente de componentes.
+- Testes automatizados para todos os componentes (visuais e unitários).
+- Revisões quinzenais do sistema para identificar componentes obsoletos ou duplicados.
+- Alinhamento com tokens de design centralizados.
+
+### Ciclo de Revisão
+
+- **Mensal**: revisão geral da biblioteca para garantir consistência.
+- **Semestral**: atualização de tokens de identidade visual, quando necessário.
+- **Sob demanda**: atualização de componentes com base em feedbacks das equipes ou necessidade de novos fluxos.
+
