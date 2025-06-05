@@ -11,19 +11,25 @@ O padrão arquitetural adotado será o **MVC (Model-View-Controller)**, visando 
 
 ## Desenho Arquitetural
 ![Close Icon](images/microservice.drawio.png) <br/>
-O diagrama representa o estilo em microsserviços, mediada por um API Gateway que centraliza o acesso aos diversos serviços da aplicação. A Interface se comunica com o API Gateway, que por sua vez distribui as requisições entre os serviços especializados:
+O diagrama representa o estilo arquitetural baseado em microsserviços, mediado por um API Gateway que centraliza o acesso aos diversos serviços da aplicação. A Interface do usuário se comunica exclusivamente com o API Gateway, que distribui as requisições entre os serviços especializados:
 
-- Serviço de Agendamento: Responsável pela marcação e cancelamento de consultas.
+- **Serviço de Agendamento**: Responsável pela marcação e cancelamento de consultas.
+- **Serviço de Paciente**: Gerencia os dados e operações relacionados aos pacientes.
+- **Serviço Médico**: Manipula informações e funcionalidades relacionadas aos médicos.
+- **Serviço de Administrador**: Centraliza funcionalidades administrativas como relatórios e gestão da aplicação.
+- **Serviço de Autenticação**: Controla o login, cadastro e autenticação dos usuários.
 
-- Serviço de Paciente: Gerencia os dados e operações relacionados aos pacientes.
+Cada serviço possui seu próprio banco de dados, respeitando o princípio da descentralização de dados, característico da arquitetura de microsserviços. Os serviços não acessam diretamente os bancos de dados uns dos outros. Em vez disso, a comunicação ocorre por meio de chamadas HTTP ou mensageria entre serviços.
 
-- Serviço Médico: Manipula informações e funcionalidades relacionadas aos médicos.
-  
-- Centraliza funcionalidades administrativas como relatórios.
+Por exemplo, quando um paciente deseja marcar uma consulta:
 
-- Serviço de Autenticação: Controla o login, cadastro e autenticação dos usuários.
+1. A requisição é enviada da Interface ao **API Gateway**.
+2. O API Gateway encaminha a solicitação ao **Serviço de Paciente**, que valida os dados do paciente.
+3. Em seguida, o Serviço de Paciente realiza uma **chamada ao Serviço de Agendamento**, solicitando a criação de um novo agendamento.
+4. O Serviço de Agendamento, por sua vez, **acessa exclusivamente seu próprio banco de dados** para gravar os dados da consulta.
 
-Cada serviço possui seu próprio banco de dados, garantindo o princípio da descentralização de dados típico de microsserviços.
+Esse modelo garante **independência entre os serviços**, melhorando a escalabilidade, manutenção e segurança. Todas as dependências entre serviços são mediadas por **contratos de API bem definidos**, sem acoplamento direto entre os bancos de dados.
+
 
 ### Identidade Visual
 
@@ -84,7 +90,7 @@ Cada serviço possui seu próprio banco de dados, garantindo o princípio da des
 | ![Variant2-5](images/Property%201=Variant2%20(5).png) | User | Usado para navegar para a de "perfil do usario". |
 | ![Variant2-4](images/Property%201=Variant2%20(4).png) | User disable | Usado para indicar quando a tela de "perfil do usario"  nao estiver em foco |
 
-#### Figma
+#### Figma (identidade visual)
 https://www.figma.com/design/jx09dLrSN39Vk5C2C2gNGQ/Trabalho-Arquitetura?node-id=0-1&p=f&t=p98Jdmk2imyMfsq0-0 
 
 ### 👥 Jornada do Usuário
@@ -104,6 +110,9 @@ https://www.figma.com/design/jx09dLrSN39Vk5C2C2gNGQ/Trabalho-Arquitetura?node-id
 - Gerenciamento de agendamentos
 - Emissão de relatórios
 - Cancela Consulta
+
+#### Figma (jornada do usuário)
+https://www.figma.com/design/b9HuaHdyiE8sYG3BYNUW3a/Untitled?node-id=0-1&p=f&t=uvlOPM4u5bNzP3ZR-0
 
 
 ## 🛠️ Tecnologias
